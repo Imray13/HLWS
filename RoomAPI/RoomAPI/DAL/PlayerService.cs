@@ -44,5 +44,14 @@ namespace RoomAPI.DAL
         {
             await _playerCollection.DeleteOneAsync(t => t.Name == name);
         }
+
+        public async Task UpdateBalance(string name, double newBalance)
+        {
+            var updateDefinition = Builders<Player>
+                .Update
+                .Set(p => p.AvailableFunds, newBalance);
+
+            await _playerCollection.UpdateOneAsync(p => p.Name == name, updateDefinition);
+        }
     }
 }

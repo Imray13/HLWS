@@ -44,5 +44,14 @@ namespace RoomAPI.DAL
         {
             await _tableCollection.DeleteOneAsync(t => t.Name == name);
         }
+
+        public async Task UpdatePlayers(string name, Dictionary<string, double> currentPlayers)
+        {
+            var updateDefinition = Builders<Table>
+                .Update
+                .Set(p => p.CurrentPlayers, currentPlayers);
+
+            await _tableCollection.UpdateOneAsync(p => p.Name == name, updateDefinition);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace RoomAPI.Models
 {
@@ -10,5 +11,7 @@ namespace RoomAPI.Models
         public int MaxPlayers { get; set; }
 
         public double MinBuyIn { get; set; }
+
+        public Dictionary<string, double> CurrentPlayers { get; set; }
     }
 }
