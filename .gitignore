@@ -2,3 +2,5 @@ RoomAPI/RoomAPI/bin/
 RoomAPI/.vs/
 RoomAPI/RoomAPI/obj/
 RoomAPI/RoomAPI/RoomAPI.csproj.user
+RoomAPI/DbMigrator/bin/
+RoomAPI/DbMigrator/obj/
