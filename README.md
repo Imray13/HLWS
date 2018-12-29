@@ -1,35 +1,6 @@
-# A service to share and find promocodes
-
-## Promocode entity:
-	Id  
-	Description  
-	Code  
-	PublisherId  
-	ExpireDate  
-	IsActive  
-	Rating  
-
-## Publisher entity:
-	Id  
-	Name  
-	Description  
-
-
-## API
-
-/codes/all GET  
-/codes/{id} GET  
-/codes/add POST  
-/codes/{id}/edit PATCH  
-/codes/{id}/delete DELETE  
-/codes/{id}/archive POST  
-/codes/{id}/rate POST  
-
-
-/publishers/add POST  
-/publishers/{id} GET  
-/publishers/all GET  
-/publishers/{id}/edit PATCH  
-/publishers/{id}/delete DELETE  
-/publishers/{id}/codes GET  
-/publishers/find?q={query} GET  
+# A prototype of online poker-room.
+### Each player can join any number of tables as soon as he has available funds
+### Each table has restrictions on max number of player and minimal buy-in
+### Player can leave a table and get his buy-in back to available funds
+### See detailed API description in the postman collection: https://documenter.getpostman.com/view/6101792/RznBMfMw
+### Technologies: MongoDB, .NET Core 2.1, IIS
